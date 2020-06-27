@@ -21,8 +21,8 @@ from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 
 #DATA LOAD
-fakepath = '/Users/seangao/Desktop/Research/fake_news/572515_1037534_bundle_archive/Fake.csv'
-truepath = '/Users/seangao/Desktop/Research/fake_news/572515_1037534_bundle_archive/True.csv'
+fakepath = '../input/fake-and-real-news-dataset/Fake.csv'
+truepath = '../input/fake-and-real-news-dataset/True.csv'
 
 fake = pd.read_csv(fakepath)
 true = pd.read_csv(truepath)
@@ -84,7 +84,7 @@ y = df['label'].to_list()
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2,
                                                     random_state = 42)
 
-embedding_path = '/Users/seangao/Desktop/Research/GloVe/glove.6B/glove.6B.100d.txt'
+embedding_path = '../input/glove-global-vectors-for-word-representation/glove.6B.100d.txt'
 
 embeddings_index = {}
 f = open(embedding_path)
